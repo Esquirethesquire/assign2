@@ -1,2 +1,3 @@
 # assign2
-Assignment 2 CSCI 323
+Data over Sata Assignment 2
+
