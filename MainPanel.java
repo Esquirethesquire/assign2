@@ -16,7 +16,7 @@ public class MainPanel extends JPanel implements ActionListener{
 	JButton Member1=new JButton("Derek Hickman");
 	JButton Member2=new JButton("Clayton Tallwhiteman");
 	JButton Member3=new JButton("Cordell Appel");
-	JButton Member4=new JButton("Eric Rickman");
+	JButton Member4=new JButton("David Rich");
 	JButton Member5=new JButton("Garret Blitzman");
 	JButton Member6=new JButton("Merek the Gitman");
 	
