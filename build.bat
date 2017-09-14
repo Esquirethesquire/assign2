@@ -1,2 +1,2 @@
-javac MainFrame.java javac MainPanel.java
+javac MainFrame.java MainPanel.java
 java MainFrame.java
