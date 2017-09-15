@@ -1,4 +1,5 @@
 
+
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -12,7 +13,7 @@ import javax.swing.*;
 
 public class MainPanel extends JPanel {
 
-	private JLabel info;
+	private JLabel nameSpace, job, education;
 	JButton Member1=new JButton("Derek Hickman");	
 	JButton Member2=new JButton("Clayton Tallwhiteman");
 	JButton Member3=new JButton("Cordell Appel");
@@ -27,7 +28,9 @@ public class MainPanel extends JPanel {
 		Member2.addActionListener(new ButtonListener2());
 		Member3.addActionListener(new ButtonListener3());
 		Member4.addActionListener(new ButtonListener4());
-		info = new JLabel("Here is our info");
+		nameSpace = new JLabel("Here is our nameSpace");
+		job = new JLabel("Here is our nameSpace");
+		education = new JLabel("Here is our nameSpace");
 		
 		JLabel label = new JLabel (this.text, JLabel.CENTER );
         label.setOpaque(true);
@@ -39,7 +42,9 @@ public class MainPanel extends JPanel {
 		add(Member2);
 		add(Member3);
 		add(Member4);
-		add(info);
+		add(nameSpace);
+		add(job);
+		add(education);
 			
 		
 	}
@@ -49,7 +54,9 @@ public class MainPanel extends JPanel {
 		public void actionPerformed(ActionEvent event)
 		{
 			
-		info.setText("My name is Derek Hickman");
+		nameSpace.setText("My name is Derek Hickman");
+		education.setText("B.S. Computer Science");
+		job.setText("Software Designer");
 		
 		}
 	}
@@ -58,7 +65,9 @@ public class MainPanel extends JPanel {
 		public void actionPerformed(ActionEvent event)
 		{
 			
-		info.setText("My name is Clayton Tallwhiteman");
+		nameSpace.setText("My name is Clayton Tallwhiteman");
+		education.setText("B.S. Computer Science");
+		job.setText("Software Developer");
 		
 		}
 	}
@@ -67,7 +76,9 @@ public class MainPanel extends JPanel {
 		public void actionPerformed(ActionEvent event)
 		{
 			
-		info.setText("My name is Cordell Appel");
+		nameSpace.setText("My name is Cordell Appel");
+		education.setText("B.S. Computer Science");
+		job.setText("Software Testing Engineer 1");
 		
 		}
 	}
@@ -76,7 +87,9 @@ public class MainPanel extends JPanel {
 		public void actionPerformed(ActionEvent event)
 		{
 			
-		info.setText("My name is David Rich");
+		nameSpace.setText("My name is David Rich");
+		education.setText("B.S. Computer Science");
+		job.setText("Software Testing Engineer 2");
 		
 		}
 	}
@@ -87,3 +100,4 @@ public class MainPanel extends JPanel {
 
 	
 	
+
