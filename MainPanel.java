@@ -1,37 +1,25 @@
-
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import java.awt.Font;
-import javax.swing.*;
 
 
-public class MainPanel extends JPanel {
+public class MainPanel extends JPanel implements ActionListener{
 
-	private JLabel nameSpace, job, education ,imageLabel;
-	JButton Member1=new JButton("Derek Hickman");	
+	JButton Member1=new JButton("Derek Hickman");
 	JButton Member2=new JButton("Clayton Tallwhiteman");
 	JButton Member3=new JButton("Cordell Appel");
 	JButton Member4=new JButton("David Rich");
 
-	
 	Dimension size = new Dimension(600,600);
 	private String text =  "Meet Our Team";
 
 	public MainPanel()
 	{
-		Member1.addActionListener(new ButtonListener1());
-		Member2.addActionListener(new ButtonListener2());
-		Member3.addActionListener(new ButtonListener3());
-		Member4.addActionListener(new ButtonListener4());
-		nameSpace = new JLabel("");
-		job = new JLabel("");
-		education = new JLabel("");
-		ImageIcon icon = new ImageIcon("MainPic.jpg");
-		imageLabel = new JLabel(icon);
-		
-		
 		JLabel label = new JLabel (this.text, JLabel.CENTER );
         label.setOpaque(true);
         label.setFont(new Font("Serif", Font.PLAIN, 30));
@@ -42,67 +30,33 @@ public class MainPanel extends JPanel {
 		add(Member2);
 		add(Member3);
 		add(Member4);
-		add(nameSpace);
-		add(imageLabel);
-		add(job);
-		add(education);
-			
-		
-	}
-	
-	private class ButtonListener1 implements ActionListener{
-	@Override
-		public void actionPerformed(ActionEvent event)
-		{
-			
-		nameSpace.setText("My name is Derek Hickman");
-		education.setText("B.S. Computer Science");
-		job.setText("Software Designer");
-		imageLabel.setIcon(new ImageIcon("TotalWar.png"));
 
-		
-		}
+		Member1.addActionListener(this);
+		Member2.addActionListener(this);
+		Member3.addActionListener(this);
+		Member4.addActionListener(this);
 	}
-	private class ButtonListener2 implements ActionListener{
+
 	@Override
-		public void actionPerformed(ActionEvent event)
-		{
-			
-		nameSpace.setText("My name is Clayton Tallwhiteman");
-		education.setText("B.S. Computer Science");
-		job.setText("Software Developer");
-		imageLabel.setIcon(new ImageIcon("Fallout4.jpg"));
-		
+	public void actionPerformed(ActionEvent e)
+	{
+		// TODO Auto-generated method stub
+		int id=0;
+
+		if (e.getSource() == Member1){
+			id = 1;
+		} else if (e.getSource() == Member2){
+			id = 2;
+		} else if (e.getSource() == Member3){
+			id = 3;
+		} else if (e.getSource() == Member4){
+			id = 4;
+		} else {
+			System.out.println("ERR0R.");
+		}
+
+		if (id>0){
+			new MemberFrame(id);
 		}
 	}
-	private class ButtonListener3 implements ActionListener{
-	@Override
-		public void actionPerformed(ActionEvent event)
-		{
-			
-		nameSpace.setText("My name is Cordell Appel");
-		education.setText("B.S. Computer Science");
-		job.setText("Software Testing Engineer 1");
-		imageLabel.setIcon(new ImageIcon("ElderScrolls.jpeg"));
-		
-		}
-	}
-	private class ButtonListener4 implements ActionListener{
-	@Override
-		public void actionPerformed(ActionEvent event)
-		{
-			
-		nameSpace.setText("My name is David Rich");
-		education.setText("B.S. Computer Science");
-		job.setText("Software Testing Engineer 2");
-		imageLabel.setIcon(new ImageIcon("warhammer.jpg"));
-		
-		}
-	}
-	
-	
 }
-
-
-	
-	
