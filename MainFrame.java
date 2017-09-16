@@ -9,7 +9,7 @@ public class MainFrame {
 	{
 		// create the frame
 		JFrame myFrame = new JFrame("Data over Sata");
-		
+
 		// set up the close operation
 		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// create panel

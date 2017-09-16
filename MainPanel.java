@@ -6,6 +6,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 
 
 public class MainPanel extends JPanel implements ActionListener{
@@ -14,6 +15,7 @@ public class MainPanel extends JPanel implements ActionListener{
 	JButton Member2=new JButton("Clayton Tallwhiteman");
 	JButton Member3=new JButton("Cordell Appel");
 	JButton Member4=new JButton("David Rich");
+	ImageIcon rebel = new ImageIcon("sw.jpg");
 
 	Dimension size = new Dimension(600,600);
 	private String text =  "Meet Our Team";
@@ -30,6 +32,9 @@ public class MainPanel extends JPanel implements ActionListener{
 		add(Member2);
 		add(Member3);
 		add(Member4);
+
+		JLabel starwars = new JLabel(rebel);
+		add(starwars);
 
 		Member1.addActionListener(this);
 		Member2.addActionListener(this);
